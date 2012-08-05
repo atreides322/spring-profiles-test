@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <beans profile="local">
+        <bean id="aBean" class="java.lang.String">
+            <constructor-arg value="Workstation specific bean."/>
+        </bean>
+    </beans>
+
+    <beans profile="dev">
+        <bean id="aBean" class="java.lang.String">
+            <constructor-arg value="Development specific bean."/>
+        </bean>
+    </beans>
+
+    <beans profile="test">
+        <bean id="aBean" class="java.lang.String">
+            <constructor-arg value="QA specific bean."/>
+        </bean>
+    </beans>
+
+    <beans profile="prod">
+        <bean id="aBean" class="java.lang.String">
+            <constructor-arg value="Production specific bean."/>
+        </bean>
+    </beans>
+</beans>
